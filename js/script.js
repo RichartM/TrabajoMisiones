@@ -16,6 +16,8 @@ document.addEventListener('keydown', (e) => {
     } else {
         konamiIndex = 0;
     }
+});
+
 // feature: dom
 const addShelterButton = document.querySelector('#add-shelter');
 const removeShelterButton = document.querySelector('#remove-shelter');
