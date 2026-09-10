@@ -1,0 +1,50 @@
+/* feature: boton-del-caos */
+@keyframes caos-shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-10px) rotate(-8deg); }
+  40% { transform: translateX(10px) rotate(8deg); }
+  60% { transform: translateX(-6px) rotate(-4deg); }
+  80% { transform: translateX(6px) rotate(4deg); }
+}
+
+.caos-animacion {
+  animation: caos-shake 0.5s ease-in-out;
+}
+
+/* feature: barra-de-navegacion */
+
+/* Desplazamiento suave al usar los anchors del menú */
+html {
+  scroll-behavior: smooth;
+}
+
+/* La navbar es sticky-top: sin esto taparía el inicio de cada sección */
+:target {
+  scroll-margin-top: 5rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.navbar .nav-link {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  opacity: 0.75;
+}
+
+/* Menú colapsado (hamburguesa): más área táctil en pantallas chicas */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+
+  .navbar .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
