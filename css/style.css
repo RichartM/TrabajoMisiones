@@ -1,3 +1,16 @@
+/* feature: boton-del-caos */
+@keyframes caos-shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-10px) rotate(-8deg); }
+  40% { transform: translateX(10px) rotate(8deg); }
+  60% { transform: translateX(-6px) rotate(-4deg); }
+  80% { transform: translateX(6px) rotate(4deg); }
+}
+
+.caos-animacion {
+  animation: caos-shake 0.5s ease-in-out;
+}
+
 /* feature: barra-de-navegacion */
 
 /* Desplazamiento suave al usar los anchors del menú */
