@@ -38,6 +38,45 @@
 
   <h1 class="text-center mt-5">Misiones</h1>
 
+  <!-- feature: formulario absurdo -->
+  <section id="formulario-absurdo" class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="text-center mb-4">Formulario absurdo</h2>
+        <form id="formulario" class="p-4 border rounded shadow-sm">
+          <div class="mb-3">
+            <label for="numero-par" class="form-label">¿Cuántos patos matemáticos necesitas?</label>
+            <input type="number" class="form-control" id="numero-par" name="numero-par" min="0" max="100" step="2" required>
+            <div class="form-text">Solo números pares entre 0 y 100.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="respuesta" class="form-label">Describe tu superpoder inútil</label>
+            <input type="text" class="form-control" id="respuesta" name="respuesta" pattern="^(?!.*[Nn][Oo]).*$" required>
+            <div class="form-text">La palabra prohibida no puede aparecer.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="criatura" class="form-label">Elige tu asesor intergaláctico</label>
+            <select class="form-select" id="criatura" name="criatura" required>
+              <option value="" selected disabled>Selecciona una criatura</option>
+              <option value="pato">Un pato con doctorado</option>
+              <option value="tostada">Una tostada filosófica</option>
+              <option value="fantasma">Un fantasma administrativo</option>
+              <option value="calcetin">Un calcetín diplomático</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="caos" class="form-label">Nivel de caos permitido: <span id="caos-valor">5</span>/10</label>
+            <input type="range" class="form-range" id="caos" name="caos" min="1" max="10" value="5" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Enviar misión absurda</button>
+          <div id="mensaje-confirmacion" class="alert alert-success mt-3 d-none" role="status"></div>
+        </form>
+      </div>
+    </div>
   <!-- feature: boton-del-caos -->
   <section id="caos" class="container my-5 text-center">
     <h2 class="mb-3">Botón del Caos</h2>
